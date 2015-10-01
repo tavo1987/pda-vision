@@ -1,0 +1,206 @@
+/*===============================================================*/
+/*	PROJECTS - ITEMS
+/*===============================================================*/
+
+.project{
+
+	display: flex;
+	flex-wrap:wrap;
+	overflow: hidden;
+	max-height: 450px;
+	background:lighten($plomo-claro,5%);
+	position: absolute;
+	z-index: 10;
+	width: 0;
+	height: 0;
+
+	&:before{
+		content: "Selecciona una provincia";
+		position: absolute;
+		top: 50%;
+		left:50%;
+		transform:translateY(-50%);
+		color: #fff;
+		text-align: center;
+		font-size: 1.25rem;
+			
+	}
+	
+	//foto y dewscripcion de la zona
+	&__container-thumb-title{
+		width: 20%;
+		display: block;
+		background:#808080;
+		position: relative;
+		z-index: 10;
+	}
+
+	&__thumbnail{
+		position: relative;
+
+		img{
+			display: block;
+			margin: auto;
+		}
+
+		&__caption{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			background:rgba(0,0,0,.7);
+			text-align: center;
+			color: $naranja;
+			margin: 0;
+			font-size: 1.125rem;
+		}
+	
+	}
+	
+
+	//titulo de provincias
+	&__title{
+		background:$naranja;
+		box-sizing: border-box;
+
+		h2{
+			transition: all .5s ease;
+			box-shadow: inset 0 0 darken($naranja,12%);
+			padding: .75rem .25rem;
+			color: #fff;
+			font-size: 1rem !important;
+			line-height: 44px;
+			border-bottom: 3px solid white;
+			text-align: center;
+			margin: 0;
+			&:hover{
+				cursor: pointer;
+				box-shadow: inset 500px 0 darken($naranja,12%);
+			}
+
+			@media screen and(max-width:48em) {
+				line-height: 18px;
+				font-size: .7rem !important;
+			}
+		}
+
+	}
+
+	
+	//content desde wordpress
+	&__content{
+		width: 80%;
+		box-sizing: border-box;
+		position: absolute;
+		transition: all .5s ease;
+		opacity: 0;
+
+		 //media query tablet
+		@media screen and(max-width:48em){
+			max-height: 370px;
+			overflow: auto;
+		}
+		
+		
+		table,tbody,tr,td,th{
+			width: 100% !important;
+			max-width: 100% !important;
+			padding: .5rem .25rem;
+		}
+
+		tr{
+			border-bottom: 1px solid $naranja-oscuro;
+
+			&:first-child{
+				text-align: center;
+				font-size: 16px;
+				color: #fff;
+				background:#E45A06;
+				font-weight: bold;
+			}
+		}
+
+		td{
+			border-right: 1px solid $naranja-oscuro;
+		}
+		
+		//movil
+		.container-pda{
+			box-sizing: border-box;
+
+			.map-pda{
+				text-align: center;
+				p{
+					overflow: hidden;
+					max-height: 150px;				
+					padding-top: .75rem;
+				}
+			}	
+		}
+		
+
+		//a partir de 960px
+		@media all and (min-width: 60em) {
+			.container-pda{
+				display: flex !important;
+				flex-wrap:wrap;
+				padding-top: 0;
+				
+				.table-pda{
+					width: 80% !important;
+					box-sizing: border-box;
+				}
+
+				.map-pda{
+					width: 19%;
+					padding-left: 1%;
+
+					p{
+						padding-top: 0rem;
+						max-height: auto;
+						overflow: visible;
+					}			
+				}
+			}//fin del contenedor de proyectos
+		}//find e media query
+		
+	}
+	
+	&__map{
+		width: 10%;
+		background:blue;
+	}
+
+}
+
+
+//para esconder los proyectos
+.active{
+   position: absolute;
+   z-index: 20;
+   width: 100%;
+   height: 100%;
+   left: 0;
+   top: 0;
+   animation-duration: .7s;  
+}
+
+.show{
+	opacity: 1;
+}
+
+//ICONO CERRA
+.btn-centro,.btn-norte,
+.btn-sur,.btn-costa{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color:#fff;
+	background:$naranja;
+	padding: .25rem .5rem;
+	transition: all .3s ease;
+	z-index: 30;
+	&:hover{
+		cursor:pointer;
+		background:$naranja-oscuro;
+	}
+}

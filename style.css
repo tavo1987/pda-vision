@@ -1,0 +1,38 @@
+
+/*   
+	Theme Name: Stylish Child
+	Description: Customización del tema para Vision Mundial Ecuador
+	Template: stylish
+	Version: 1.0.0
+*/
+
+@import url("../stylish/style.css");
+
+/*estilos icono youtube*/
+
+.icon-youtube-play:hover, 
+.icon-google-plus:hover,
+.icon-facebook:hover,
+.icon-twitter:hover,
+.icon-instagram:hover{
+	color: #F0F0F0 !important;
+	
+}
+
+.icon-youtube-play:hover{
+	background: #DA2724;
+}
+
+.icon-google-plus:hover{
+	background:#DF4B38;
+}
+
+.skill-bar {
+    background-color: #59585D !important;
+}
+
+.home-404,.nosotros-404{
+	font-size: 1.5rem !important;
+	padding: .75rem;
+}
+

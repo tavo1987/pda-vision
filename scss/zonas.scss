@@ -1,0 +1,144 @@
+
+
+.bg-map{
+	background:url(../img/mapa.png) no-repeat center;;
+	margin-top: 5rem;
+	margin-bottom: 0;
+	position: relative;
+	*{
+		box-sizing: border-box;
+	}
+	
+	//desde 440px hacia abajo
+	@media all and (max-width:$breakpoint-movil) {
+		background:none;
+		text-align: center;
+	}
+}
+.container-zonas{
+	//max-height: 370px;
+	display: flex;
+	flex-wrap:wrap;
+	margin: auto;
+	max-width: 370px;
+	//overflow: hidden;
+	
+	//desde 440px hacia abajo
+	@media screen and (max-width:$breakpoint-movil) {
+		max-width: 180px;
+		max-height:2000px;
+		display: block;
+	}
+}
+
+
+
+.zona{
+	position: relative;
+	margin:auto;
+	overflow: hidden;
+	max-height: 180px;
+
+	&:nth-child(1){
+		margin-bottom: 5px;
+		margin-right: 5px;	
+	}
+
+	&:nth-child(2){
+		margin-bottom: 5px;
+		margin-left: 5px;
+	}
+
+	&:nth-child(3){
+		margin-top: 5px;
+		margin-right: 5px;	
+	}
+
+	&:nth-child(4){
+		margin-top: 5px;
+		margin-left: 5px;	
+	}
+
+	&:hover{
+		cursor: pointer;
+
+	}
+
+	&:hover .zona__title a{
+		bottom: -100%;
+	}
+
+	&:hover .zona__description{
+		top: 0;
+	}
+
+
+	&__thumbnail{
+		display: block;
+		margin: auto;
+		max-width: 180px;
+		min-height: 180px;
+		
+	}
+
+	&__title a{
+		position: absolute;
+		font-size: 18px;
+		color: #fff;
+		background:rgba(0,0,0,.6);
+		color: #E78005;
+		font-weight: bold;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		display: block;
+		padding: 0px 5px 1.25rem 15px;
+		transition: all .4s ease;
+		
+		&:hover{
+			color: #000;
+		}
+	}
+
+	&__description{
+		position: absolute;
+		background:red;
+		z-index: 10;
+		height: 100%;
+		width: 100%;
+		padding: 1rem;
+		background:rgba(0,0,0,.6);
+		top: -100%;
+		color: #fff;
+		transition: all .4s ease;
+	}
+
+}
+
+
+@media screen and (max-width:$breakpoint-movil){
+	.main-pda{
+		padding-top: 1.5rem !important;
+		padding-bottom: 1.5rem !important;
+	}
+	
+	.bg-map{
+		margin-top: 0;
+	}
+
+	.zona{
+		margin-left: 0 !important;
+		margin-right: 0 !important; 
+	}
+}
+
+@media screen and (max-width:$breakpoint-desktop){
+	.main-pda{
+		padding-top: 1.5rem !important;
+		padding-bottom: 1.5rem !important;
+	}
+
+	.bg-map{
+		margin-top: 0;
+	}
+}
