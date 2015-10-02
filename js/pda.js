@@ -14,27 +14,24 @@ jQuery(document).ready(function($) {
 	/*===========================================================================*/
 	$('.zona-norte').on('click', function(even) {
 		event.preventDefault();
+
 		$('.norte  .project').toggleClass('active animated zoomInDown');
-		$('.preguntas').hide();
 		
 	});
 
 	$('.zona-centro').on('click', function(even) {
 		even.preventDefault();
 		$('.centro  .project').toggleClass('active animated zoomInDown');
-		$('.preguntas').hide();
 	});
 
 	$('.zona-costa').on('click', function(even) {
 		even.preventDefault();
 		$('.costa  .project').toggleClass('active animated zoomInDown');
-		$('.preguntas').hide();
 	});
 
 	$('.zona-sur').on('click', function(even) {
 		even.preventDefault();
 		$('.sur  .project').toggleClass('active animated zoomInDown');
-		$('.preguntas').hide();
 	});
 
 
@@ -68,13 +65,15 @@ jQuery(document).ready(function($) {
 	/*===========================================================================*/
 	//tab Carchi
 	$('.btn-carchi').on('click', function() {
-		$('.project__content.carchi').toggleClass('show');
-		$('.project__content.esmeraldas').removeClass('show');
-	});
+
+		$('.project__content.carchi').css({'opacity':'1','z-index':'40',});
+		$('.project__content.esmeraldas').css({'opacity':'0','z-index':'0'});
+
+	});//fin carchi
 
 	$('.btn-esmeraldas').on('click', function() {
-		$('.project__content.esmeraldas').toggleClass('show');
-		$('.project__content.carchi').removeClass('show');
+		$('.project__content.esmeraldas').css({'opacity':'1','z-index':'40'});
+		$('.project__content.carchi').css({'opacity':'0','z-index':'0'});
 	});
 
 	
@@ -83,13 +82,13 @@ jQuery(document).ready(function($) {
 	/*BOTONES PARA ABRIR PROYECTOS ZONA COSTA
 	/*===========================================================================*/
 	$('.btn-los-rios').on('click', function() {
-		$('.project__content.los-rios').toggleClass('show');
-		$('.project__content.manabi').removeClass('show');
+		$('.project__content.los-rios').css({'opacity':'1','z-index':'40',});
+		$('.project__content.manabi').css({'opacity':'0','z-index':'0'});
 	});
 
 	$('.btn-manabi').on('click', function() {
-		$('.project__content.manabi').toggleClass('show');
-		$('.project__content.los-rios').removeClass('show');
+		$('.project__content.manabi').css({'opacity':'1','z-index':'40',});
+		 $('.project__content.los-rios').css({'opacity':'0','z-index':'0'});
 	});
 
 
@@ -98,13 +97,13 @@ jQuery(document).ready(function($) {
 	/*BOTONES PARA ABRIR PROYECTOS ZONA COSTA
 	/*===========================================================================*/
 	$('.btn-tungurahua').on('click', function() {
-		$('.project__content.tungurahua').toggleClass('show');
-		$('.project__content.cotopaxi').removeClass('show');
+		$('.project__content.tungurahua').css({'opacity':'1','z-index':'40',});
+		$('.project__content.cotopaxi').css({'opacity':'0','z-index':'0'});
 	});
 
 	$('.btn-cotopaxi').on('click', function() {
-		$('.project__content.cotopaxi').toggleClass('show');
-		$('.project__content.tungurahua').removeClass('show');
+		$('.project__content.cotopaxi').css({'opacity':'1','z-index':'40',});
+		$('.project__content.tungurahua').css({'opacity':'0','z-index':'0'});
 	});
 
 
@@ -112,21 +111,17 @@ jQuery(document).ready(function($) {
 	/*BOTONES PARA ABRIR PROYECTOS ZONA SUR
 	/*===========================================================================*/
 	$('.btn-chimborazo').on('click', function() {
-		$('.project__content.chimborazo').toggleClass('show');
-		$('.project__content.bolivar').removeClass('show');
+		$('.project__content.chimborazo').css({'opacity':'1','z-index':'40',});
+		$('.project__content.bolivar').css({'opacity':'0','z-index':'0'});
 	});
 
 	$('.btn-bolivar').on('click', function() {
-		$('.project__content.bolivar').toggleClass('show');
-		$('.project__content.chimborazo').removeClass('show');
+		$('.project__content.bolivar').css({'opacity':'1','z-index':'40',});
+		$('.project__content.chimborazo').css({'opacity':'0','z-index':'0'});
 	});
 
 
 
-
-
-
-		
 
 	//PARA NINAR LA ZONA AL DAR CLICK EN LA FOTO
 	$('.zona').on('click', function(){

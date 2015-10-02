@@ -41,34 +41,37 @@
 					<img src="http://www.worldvision.org.ec/wp-content/uploads/2015/09/ZonaNorte.jpg" alt="">
 					<h3 class="project__thumbnail__caption">Zona Norte</h3>
 				</div>
-				<div class="project__title">
+
+				<div class="project__provincias">
 					<h2 class="btn-carchi">CARCHI - IMBABURA</h2>
 					<h2 class="btn-esmeraldas">ESMERALDAS</h2>
 				</div>
 				
 			</div>
 			
-			<?php if ( $zona_norte->have_posts() ) : while ( $zona_norte->have_posts() ) : $zona_norte->the_post(); ?>
+			<div class="container-content-pda">
+				<?php if ( $zona_norte->have_posts() ) : while ( $zona_norte->have_posts() ) : $zona_norte->the_post(); ?>
 
-				
 					
-				<?php if( get_the_ID() == 3453/*CARCHI*/):?>
-					<div class="project__content carchi">
-					  <?php the_content();?>
-					</div>
-				<?php endif;?>
+						
+					<?php if( get_the_ID() == 3453/*CARCHI*/):?>
+						<div class="project__content carchi">
+						  <?php the_content();?>
+						</div>
+					<?php endif;?>
 
-				<?php if(get_the_ID() == 3464/*ESMERALDAS*/):?>
-					<div class="project__content esmeraldas">
-					  <?php the_content();?>
-					</div>
-				<?php endif;?>
+					<?php if(get_the_ID() == 3464/*ESMERALDAS*/):?>
+						<div class="project__content esmeraldas">
+						  <?php the_content();?>
+						</div>
+					<?php endif;?>
 
-				<!-- <div class="project__map">
-					<?php /*the_field('mapa')*/ ?>
-				</div> -->
+					<!-- <div class="project__map">
+						<?php /*the_field('mapa')*/ ?>
+					</div> -->
 
-			<?php endwhile; ?>
+				<?php endwhile; ?>
+			</div>
 		</div>
 			<!-- post navigation -->
 			<?php wp_reset_postdata(); ?>
@@ -111,36 +114,35 @@
 					<img src="http://www.worldvision.org.ec/wp-content/uploads/2015/09/ZonaCosta.jpg" alt="">
 					<h3 class="project__thumbnail__caption">Zona Costa</h3>
 				</div>
-				<div class="project__title">
-					<h2 class="btn-los-rios">LOS RIOS</h2>
-				</div>
 
-				<div class="project__title">
+				<div class="project__provincias">
+					<h2 class="btn-los-rios">LOS RIOS</h2>
 					<h2 class="btn-manabi">MANABÍ</h2>
 				</div>
 				
 			</div>
 			
-							
-			<?php if ( $zona_costa->have_posts() ) : while ( $zona_costa->have_posts() ) : $zona_costa->the_post(); ?>
+			<div class="container-content-pda">				
+				<?php if ( $zona_costa->have_posts() ) : while ( $zona_costa->have_posts() ) : $zona_costa->the_post(); ?>
 
-				<?php if( get_the_ID() == 3467/*LOS RIOS*/):?>
-					<div class="project__content los-rios">
-					  <?php the_content();?>
-					</div>
-				<?php endif;?>
+					<?php if( get_the_ID() == 3467/*LOS RIOS*/):?>
+						<div class="project__content los-rios">
+						  <?php the_content();?>
+						</div>
+					<?php endif;?>
 
-				<?php if(get_the_ID() == 3454/*MANABI*/):?>
-					<div class="project__content manabi">
-					  <?php the_content();?>
-					</div>
-				<?php endif;?>
+					<?php if(get_the_ID() == 3454/*MANABI*/):?>
+						<div class="project__content manabi">
+						  <?php the_content();?>
+						</div>
+					<?php endif;?>
 
-				<!-- <div class="project__map">
-					<?php /*the_field('mapa')*/ ?>
-				</div> -->
+					<!-- <div class="project__map">
+						<?php /*the_field('mapa')*/ ?>
+					</div> -->
 
-			<?php endwhile; ?>
+				<?php endwhile; ?>
+			</div>
 		</div>
 			<!-- post navigation -->
 			<?php wp_reset_postdata(); ?>
@@ -183,28 +185,29 @@
 					<img src="http://www.worldvision.org.ec/wp-content/uploads/2015/09/ZonaCentro.jpg" alt="">
 					<h3 class="project__thumbnail__caption">Zona Centro</h3>
 				</div>
-				<div class="project__title">
+				<div class="project__provincias">
 					<h2 class="btn-tungurahua">TUNGURAHUA</h2>
 					<h2 class="btn-cotopaxi">COTOPAXI</h2>
 				</div>
 			</div>
 			
-							
-			<?php if ( $zona_centro->have_posts() ) : while ( $zona_centro->have_posts() ) : $zona_centro->the_post(); ?>
-				
-				<?php if( get_the_ID() == 3456/*TUNGURAHUA*/):?>
-					<div class="project__content tungurahua">
-					  <?php the_content();?>
-					</div>
-				<?php endif;?>
+			<div class="container-content-pda">			
+				<?php if ( $zona_centro->have_posts() ) : while ( $zona_centro->have_posts() ) : $zona_centro->the_post(); ?>
+					
+					<?php if( get_the_ID() == 3456/*TUNGURAHUA*/):?>
+						<div class="project__content tungurahua">
+						  <?php the_content();?>
+						</div>
+					<?php endif;?>
 
-				<?php if(get_the_ID() == 3469/*COTOPAXI*/):?>
-					<div class="project__content cotopaxi">
-					  <?php the_content();?>
-					</div>
-				<?php endif;?>
+					<?php if(get_the_ID() == 3469/*COTOPAXI*/):?>
+						<div class="project__content cotopaxi">
+						  <?php the_content();?>
+						</div>
+					<?php endif;?>
 
-			<?php endwhile; ?>
+				<?php endwhile; ?>
+			</div>
 		</div>
 			<!-- post navigation -->
 			<?php wp_reset_postdata(); ?>
@@ -248,32 +251,34 @@
 					<img src="http://www.worldvision.org.ec/wp-content/uploads/2015/09/ZonaSur.jpg" alt="">
 					<h3 class="project__thumbnail__caption">Zona Sur</h3>
 				</div>
-				<div class="project__title">
+
+				<div class="project__provincias">
 					<h2 class="btn-chimborazo">CHIMBORAZO</h2>
 					<h2 class="btn-bolivar">BOLIVAR</h2>
 				</div>
 				
 			</div>
 			
-							
-			<?php if ( $zona_sur->have_posts() ) : while ( $zona_sur->have_posts() ) : $zona_sur->the_post(); ?>
-				<?php if( get_the_ID() == 3455/*CHIMBORAZO*/):?>
-					<div class="project__content chimborazo">
-					  <?php the_content();?>
-					</div>
-				<?php endif;?>
+			<div class="container-content-pda">			
+				<?php if ( $zona_sur->have_posts() ) : while ( $zona_sur->have_posts() ) : $zona_sur->the_post(); ?>
+					<?php if( get_the_ID() == 3455/*CHIMBORAZO*/):?>
+						<div class="project__content chimborazo">
+						  <?php the_content();?>
+						</div>
+					<?php endif;?>
 
-				<?php if(get_the_ID() == 3472/*BOLIVAR*/):?>
-					<div class="project__content bolivar">
-					  <?php the_content();?>
-					</div>
-				<?php endif;?>
+					<?php if(get_the_ID() == 3472/*BOLIVAR*/):?>
+						<div class="project__content bolivar">
+						  <?php the_content();?>
+						</div>
+					<?php endif;?>
 
-				<!-- <div class="project__map">
-					<?php /*the_field('mapa')*/ ?>
-				</div> -->
+					<!-- <div class="project__map">
+						<?php /*the_field('mapa')*/ ?>
+					</div> -->
 
-			<?php endwhile; ?>
+				<?php endwhile; ?>
+			</div>
 		</div>
 			<!-- post navigation -->
 			<?php wp_reset_postdata(); ?>

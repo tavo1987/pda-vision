@@ -11,8 +11,7 @@
 	background:lighten($plomo-claro,5%);
 	position: absolute;
 	z-index: 10;
-	width: 0;
-	height: 0;
+	
 
 	&:before{
 		content: "Selecciona una provincia";
